@@ -1,0 +1,21 @@
+/* income area  */
+.income-area{
+    background-color: rgb(240, 238, 238);
+    border-radius: 10px;
+}
+input {
+    background-color: rgb(216, 211, 211);
+    border: none;
+    padding: 5px 15px;
+}
+span{
+    background-color: rgb(216, 211, 211);
+}
+
+
+/* media query  */
+@media only screen and (max-width: 768px) {
+    .img-height {
+        height: 100px ;
+    }
+  }

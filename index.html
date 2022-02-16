@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Money Master</title>
+    <title>My Money Draft</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,12 +11,76 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!--  CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <header>
-        <h1 class="text-center mt-4 text-primary">Money Master</h1>
+        <h1 class="text-center my-4 text-primary">My Money Draft 🗒✏️</h1>
     </header>
+    <main>
+        <div class="container">
+            <div class="row gx-5 mb-5 ">
+                <div class="col-lg-6 ">
+                    <img src="images/cash.jpg" class="img-height" style="height: 99vh; width: 100%;" alt="money-draft">
+                </div>
+                <div class="col-lg-6 text-center income-area">
+                    <!-- my draft part start -->
+                    <div>
+                        <h5 class="my-3">My Income</h5>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <p class="fw-bold">Income :</p>
+                            </div>
+                            <div class="col"><input type="text" name="" id="" placeholder="10000"></div>
+                            <div class="col"></div>
+                        </div>
+                        <h5>Expenses</h5>
+                        <div class="row my-3">
+                            <div class="col"></div>
+                            <div class="col">
+                                <p class="fw-bold">Food :</p>
+                            </div>
+                            <div class="col"><input type="text" name="" id="" placeholder="3000"></div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col"></div>
+                            <div class="col">
+                                <p class="fw-bold">Rent :</p>
+                            </div>
+                            <div class="col"><input type="text" name="" id="" placeholder="2000"></div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col"></div>
+                            <div class="col">
+                                <p class="fw-bold">Clothes :</p>
+                            </div>
+                            <div class="col"><input type="text" name="" id="" placeholder="500"></div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    <!-- my draft part end -->
+                    <!-- calculate part start -->
+                    <button type="button" class="btn btn-primary px-5 py-2 my-2 fw-bold fs-6">Calculate</button>
+                    <h5 class="my-2">Total Expenses: 5500 </h5>
+                    <h5 class="mt-1">Balance: 4500
+                    </h5>
+                    <h5 class="mt-3">Save: <span class="px-5 py-2 mx-2">20</span> % <button type="button"
+                            class="btn btn-primary px-5 py-2 ms-2 fw-bold fs-6 mt-sm-3"
+                            style="margin: 23px;">Save</button>
+                    </h5>
+                    <h5>Saving Amount: 2000 </h5>
+                    <h5 class="my-4">Remaining Balance: 2500 </h5>
+                    <!-- calculate part end -->
+                </div>
+            </div>
+        </div>
+    </main>
 
 
 
@@ -28,6 +92,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+    <!-- Js Link  -->
     <script src="app.js"></script>
 </body>
 
