@@ -51,13 +51,16 @@ document.getElementById('calculate-cost').addEventListener('click', function () 
 //calculate save & remaining 
 document.getElementById('calculate-save').addEventListener('click', function () {
     const incomeValue = parseFloat(incomeInput.value);
+    const balance = incomeValue - getValue()
+    if (balance == NaN) {
+        document.getElementById('total-remaining').innerText = 'Unexpected value '
+    }
     if (incomeValue < getValue()) {
         document.getElementById('total-save').innerText = 'Nothing To Save';
         document.getElementById('total-remaining').innerText = 'Earn First';
     }
     else {
         const totalSave = (incomeValue * 20) / 100;
-        const balance = incomeValue - getValue()
         if (balance < totalSave) {
             document.getElementById('total-save').innerText = ' Balace is low nothing to save';
             document.getElementById('total-remaining').innerText = balance;
