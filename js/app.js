@@ -15,12 +15,11 @@ function getValue() {
 
 //calculate cost 
 document.getElementById('calculate-cost').addEventListener('click', function () {
-
     const inputField = document.getElementsByClassName('input-field');
     for (const element of inputField) {
         //alert empty field
         if (element.value == '') {
-            alert('Opps !! Give me positive  value')
+            alert('Opps !! Give me  value')
             break
         }
         //alert negetive value
