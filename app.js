@@ -15,16 +15,23 @@ function getValue() {
 
 //calculate cost 
 document.getElementById('calculate-cost').addEventListener('click', function () {
+
     const inputField = document.getElementsByClassName('input-field');
     for (const element of inputField) {
-        if (element.value < 0) {
+        //alert empty field
+        if (element.value == '') {
+            alert('Opps !! Give me positive  value')
+            break
+        }
+        //alert negetive value
+        else if (element.value < 0) {
             alert('Enter positive value')
             break
         }
         else {
             const incomeValue = parseFloat(incomeInput.value);
             if (incomeValue < getValue()) {
-                document.getElementById('total-expense').innerText = 'Low Income First Earn Then Expense';
+                document.getElementById('total-expense').innerText = 'Low income or unexpected income earn first ';
                 document.getElementById('total-balance').innerText = 'Nothing to show';
             }
             else {
