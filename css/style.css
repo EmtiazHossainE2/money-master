@@ -13,3 +13,13 @@ span{
     background-color: rgb(216, 211, 211);
 }
 
+.img-height{
+    width: 100%;
+    height: 98vh;
+}
+@media only screen and (max-width: 768px) {
+    .img-height{
+        width: 100%;
+        height: auto;
+    }
+  }

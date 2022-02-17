@@ -12,6 +12,10 @@ function getValue() {
     const totalExpense = foodValue + rentValue + clothValue;
     return totalExpense;
 }
+function error() {
+    document.getElementById('total-expense').innerText = 'Unexpected value ';
+    document.getElementById('total-balance').innerText = 'Nothing to show';
+}
 
 //calculate cost 
 document.getElementById('calculate-cost').addEventListener('click', function () {
@@ -20,17 +24,19 @@ document.getElementById('calculate-cost').addEventListener('click', function () 
         //alert empty field
         if (element.value == '') {
             alert('Opps !! Give me  value')
+            error();
             break
         }
         //alert negetive value
         else if (element.value < 0) {
             alert('Enter positive value')
+            error()
             break
         }
         else {
             const incomeValue = parseFloat(incomeInput.value);
             if (incomeValue < getValue()) {
-                document.getElementById('total-expense').innerText = 'Low income or unexpected income earn first ';
+                document.getElementById('total-expense').innerText = 'Low income,Earn more,Expense more ';
                 document.getElementById('total-balance').innerText = 'Nothing to show';
             }
             else {
