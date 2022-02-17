@@ -12,10 +12,3 @@ span{
     background-color: rgb(216, 211, 211);
 }
 
-
-/* media query  */
-@media only screen and (max-width: 768px) {
-    .img-height {
-        height: 100px ;
-    }
-  }

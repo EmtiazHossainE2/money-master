@@ -15,17 +15,44 @@ function getValue() {
 
 //calculate cost 
 document.getElementById('calculate-cost').addEventListener('click', function () {
-    const incomeValue = parseFloat(incomeInput.value);
-    const balance = incomeValue - getValue();
-    document.getElementById('total-expense').innerText = getValue();
-    document.getElementById('total-balance').innerText = balance;
+    const inputField = document.getElementsByClassName('input-field');
+    for (const element of inputField) {
+        if (element.value < 0) {
+            alert('Enter positive value')
+            break
+        }
+        else {
+            const incomeValue = parseFloat(incomeInput.value);
+            if (incomeValue < getValue()) {
+                document.getElementById('total-expense').innerText = 'Low Income First Earn Then Expense';
+                document.getElementById('total-balance').innerText = 'Nothing to show';
+            }
+            else {
+                document.getElementById('total-expense').innerText = getValue();
+                const balance = incomeValue - getValue();
+                document.getElementById('total-balance').innerText = balance;
+            }
+        }
+    }
 })
 
 //calculate save & remaining 
 document.getElementById('calculate-save').addEventListener('click', function () {
     const incomeValue = parseFloat(incomeInput.value);
-    const totalSave = (incomeValue * 20) / 100;
-    const balance = incomeValue - getValue()
-    document.getElementById('total-save').innerText = totalSave;
-    document.getElementById('total-remaining').innerText = balance - totalSave;
+    if (incomeValue < getValue()) {
+        document.getElementById('total-save').innerText = 'Nothing To Save';
+        document.getElementById('total-remaining').innerText = 'Earn First';
+    }
+    else {
+        const totalSave = (incomeValue * 20) / 100;
+        const balance = incomeValue - getValue()
+        if (balance < totalSave) {
+            document.getElementById('total-save').innerText = ' Balace is low nothing to save';
+            document.getElementById('total-remaining').innerText = balance;
+        }
+        else {
+            document.getElementById('total-save').innerText = totalSave;
+            document.getElementById('total-remaining').innerText = balance - totalSave;
+        }
+    }
 })
